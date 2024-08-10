@@ -5,17 +5,17 @@ export default function ContactUS() {
     const contactMethods = [
         {
             icon: faEnvelope,
-            contact: "Support@example.com",
+            contact: "aa90101077aa@gmail.com",
             label: "Email"
         },
         {
             icon: faPhone,
-            contact: "+1 (555) 000-000",
+            contact: "968 96611253",
             label: "Phone"
         },
         {
             icon: faMapMarkerAlt,
-            contact: "Mountain View, California, United States",
+            contact: "Al Khawd / Al Seeb / Muscat Governorate",
             label: "Address"
         },
         {
@@ -25,7 +25,7 @@ export default function ContactUS() {
         },
         {
             icon: faGlobe,
-            contact: "www.example.com",
+            contact: "abdulazizgroups.com",
             label: "Website"
         }
     ]
