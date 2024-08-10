@@ -75,7 +75,7 @@ export default function Header() {
               <a
                 key={idx}
                 href={item.path}
-                className="text-gray-800 hover:text-yellow-600 px-2 xl:px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1 xl:space-x-2 transition duration-150 ease-in-out"
+                className="text-gray-800 hover:text-blue-600 px-2 xl:px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1 xl:space-x-2 transition duration-150 ease-in-out"
               >
                 {item.icon}
                 <span className="hidden xl:inline">{item.title}</span>
@@ -123,7 +123,7 @@ export default function Header() {
                 <a
                   key={idx}
                   href={item.path}
-                  className="text-gray-800 hover:text-yellow-600 block px-3 py-2 rounded-md text-base font-medium flex items-center space-x-2 transition duration-150 ease-in-out"
+                  className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium flex items-center space-x-2 transition duration-150 ease-in-out"
                 >
                   {item.icon}
                   <span>{item.title}</span>

@@ -51,11 +51,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-white text-gray-800 py-8">
       <div className="max-w-screen-xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-yellow-400">Stay Connected</h3>
+            <h3 className="text-xl font-bold text-yellow-600">Stay Connected</h3>
             <form onSubmit={handleSubmit} className="space-y-2">
               <div className="relative">
                 <input
@@ -64,7 +64,7 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="w-full pl-10 pr-3 py-1.5 text-gray-900 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full pl-10 pr-3 py-1.5 text-gray-900 bg-gray-100 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
                 <FaEnvelope className="w-5 h-5 text-gray-400 absolute left-2 top-1.5" />
               </div>
@@ -73,22 +73,22 @@ export default function Footer() {
               </button>
             </form>
             <div className="flex items-center space-x-3 text-sm">
-              <FaMapMarkerAlt className="w-4 h-4 text-gray-300" />
+              <FaMapMarkerAlt className="w-4 h-4 text-gray-600" />
               <span>123 Business Ave, City, Country</span>
             </div>
             <div className="flex items-center space-x-3 text-sm">
-              <FaPhone className="w-4 h-4 text-gray-300" />
+              <FaPhone className="w-4 h-4 text-gray-600" />
               <span>+1 (123) 456-7890</span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-6 md:col-span-2">
             {footerNavs.map((item, idx) => (
               <div key={idx} className="space-y-3">
-                <h4 className="text-md font-semibold text-yellow-400">{item.label}</h4>
+                <h4 className="text-md font-semibold text-yellow-600">{item.label}</h4>
                 <ul className="space-y-2">
                   {item.items.map((el, idx) => (
                     <li key={idx}>
-                      <a href={el.href} className="text-gray-300 hover:text-white transition duration-200">{el.name}</a>
+                      <a href={el.href} className="text-gray-600 hover:text-gray-900 transition duration-200">{el.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -96,24 +96,24 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-gray-700">
+        <div className="mt-8 pt-6 border-t border-gray-200">
           <div className="flex flex-wrap justify-between items-center">
-            <div className="flex space-x-4 text-gray-400">
-              <a href="#" className="hover:text-white transition duration-200">
+            <div className="flex space-x-4 text-gray-500">
+              <a href="#" className="hover:text-gray-800 transition duration-200">
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="hover:text-white transition duration-200">
+              <a href="#" className="hover:text-gray-800 transition duration-200">
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="hover:text-white transition duration-200">
+              <a href="#" className="hover:text-gray-800 transition duration-200">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="hover:text-white transition duration-200">
+              <a href="#" className="hover:text-gray-800 transition duration-200">
                 <SiTelegram size={20} />
               </a>
             </div>
             <div className="mt-4 sm:mt-0">
-              <a href="#" className="text-yellow-400 hover:text-yellow-300 transition duration-200">Back to Top</a>
+              <a href="#" className="text-yellow-600 hover:text-yellow-700 transition duration-200">Back to Top</a>
             </div>
           </div>
         </div>
