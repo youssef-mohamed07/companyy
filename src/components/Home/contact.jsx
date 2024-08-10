@@ -31,7 +31,7 @@ export default function ContactUS() {
     ]
 
     return (
-        <section id="contact" className="bg-gray-100 py-16">
+        <section id="contact" className="bg-white py-16">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <header className="text-center mb-10">
                     <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">Get in Touch</h2>

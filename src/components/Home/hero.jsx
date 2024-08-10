@@ -24,13 +24,13 @@ export default function Hero() {
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <a 
-                                href="/" 
+                                href="#services" 
                                 className="block py-2 px-4 text-center font-medium bg-yellow-500 duration-150 hover:bg-yellow-600 active:bg-yellow-700 text-white shadow-lg hover:shadow-xl flex items-center justify-center"
                             >
                                 Services
                             </a>
                             <a 
-                                href="/" 
+                                href="#contact" 
                                 className="flex items-center justify-center gap-x-2 py-2 px-4 duration-150 hover:text-yellow-500 text-black border border-none md:inline-flex"
                             >
                                 Contact us
