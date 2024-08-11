@@ -82,11 +82,11 @@ export default function Footer() {
             </form>
             <div className="flex items-center space-x-3 text-sm">
               <FaMapMarkerAlt className="w-4 h-4 text-gray-600" />
-              <span>123 Business Ave, City, Country</span>
+              <span>Al Khawd / Al Seeb / Muscat Governorate</span>
             </div>
             <div className="flex items-center space-x-3 text-sm">
               <FaPhone className="w-4 h-4 text-gray-600" />
-              <span>+1 (123) 456-7890</span>
+              <span>968 96611253</span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-2">
@@ -119,12 +119,7 @@ export default function Footer() {
               <a href="#" className="hover:text-gray-800 transition duration-200">
                 <SiTelegram size={20} />
               </a>
-              <a href="#" className="hover:text-gray-800 transition duration-200">
-                <FaLinkedin size={20} />
-              </a>
-              <a href="#" className="hover:text-gray-800 transition duration-200">
-                <FaGithub size={20} />
-              </a>
+            
             </div>
             <div className="mt-4 sm:mt-0">
               <a href="/" onClick={handleBackToTop} className="text-yellow-600 hover:text-yellow-700 transition duration-200">Back to Top</a>

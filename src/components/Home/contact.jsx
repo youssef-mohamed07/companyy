@@ -28,13 +28,13 @@ export default function ContactUS() {
             contact: "abdulazizgroups.com",
             label: "Website"
         }
-    ]
+    ];
 
     return (
         <section id="contact" className="bg-white py-16">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <header className="text-center mb-10">
-                    <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">Get in Touch</h2>
+                    <h2 className="text-4xl font-bold mb-8 text-gray-900">Get in Touch</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         We're here to answer your questions and help you in any way we can. 
                         Reach out to us through any of the methods below or use our contact form.
@@ -59,20 +59,10 @@ export default function ContactUS() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md">
-                            <h3 className="text-xl font-semibold text-gray-800 mb-4">FAQ</h3>
-                            <ul className="space-y-4">
-                                <li>
-                                    <p className="font-medium text-gray-800">What are your business hours?</p>
-                                    <p className="text-gray-600">We're open Monday to Friday, 9AM to 5PM.</p>
-                                </li>
-                                <li>
-                                    <p className="font-medium text-gray-800">Do you offer support on weekends?</p>
-                                    <p className="text-gray-600">We offer limited email support on weekends for urgent matters.</p>
-                                </li>
-                            </ul>
-                        </div>
+
+                        
                     </div>
+
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         <h3 className="text-xl font-semibold text-gray-800 mb-4">Send us a Message</h3>
                         <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
@@ -129,5 +119,5 @@ export default function ContactUS() {
                 </div>
             </div>
         </section>
-    )
+    );
 }

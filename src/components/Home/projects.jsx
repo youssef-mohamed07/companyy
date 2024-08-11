@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBuilding, FaHome, FaIndustry, FaExchangeAlt, FaLandmark, FaHardHat, FaCogs, FaMicrochip, FaSeedling, FaHotel, FaGraduationCap, FaMedkit, FaSearch, FaStar, FaTimes, FaBars } from 'react-icons/fa';
+import { FaBuilding, FaHome, FaIndustry, FaExchangeAlt, FaLandmark, FaHardHat, FaCogs, FaMicrochip, FaSeedling, FaHotel, FaGraduationCap, FaMedkit, FaSearch, FaStar, FaTimes, FaBars, FaExternalLinkAlt } from 'react-icons/fa';
 
 // Define category icons mapping
 const categoryIcons = {
@@ -17,6 +17,7 @@ const categoryIcons = {
   Education: FaGraduationCap,
   Health: FaMedkit,
 };
+
 const projects = [
   { id: 1, name: 'Commercial', address: '2715 Ash Dr. San Jose, South Dakota', image: 'a.avif', category: 'Commercial', description: 'A modern commercial complex with state-of-the-art facilities.' },
   { id: 2, name: 'Residential', address: '2972 Westheimer Rd. Santa Ana, Illinois', image: 'b.avif', category: 'Residential', description: 'Luxury residential apartments with scenic views.' },
@@ -182,7 +183,6 @@ export default function Projects() {
                 <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-2 text-yellow-500">{project.name}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{project.address}</p>
                   <p className="text-gray-800">{project.description}</p>
                   <div className="mt-4 flex items-center text-sm text-gray-600">
                     {categoryIcons[project.category] && React.createElement(categoryIcons[project.category], { className: "mr-2" })}
@@ -244,7 +244,7 @@ export default function Projects() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-4"
+              className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-4 relative"
               initial={{ y: -100 }}
               animate={{ y: 0 }}
               exit={{ y: 100 }}
@@ -263,6 +263,15 @@ export default function Projects() {
                 {categoryIcons[selectedProject.category] && React.createElement(categoryIcons[selectedProject.category], { className: "mr-2" })}
                 {selectedProject.category}
               </div>
+              <a
+                href={selectedProject.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 w-full bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 flex items-center justify-center"
+              >
+                <FaExternalLinkAlt className="mr-2" />
+                Visit Website
+              </a>
             </motion.div>
           </motion.div>
         </AnimatePresence>

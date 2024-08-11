@@ -20,8 +20,7 @@ export default function Hero() {
                             We help startups to grow and make money
                         </h2>
                         <p className="text-black">
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                        </p>
+                        We are committed to delivering excellence, ensuring every project is executed with precision and integrity, exceeding client expectations at every stage.                        </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <a 
                                 href="#services" 
