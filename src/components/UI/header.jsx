@@ -62,11 +62,11 @@ export default function Header() {
           <div className="flex items-center">
             <a href="/" className="flex-shrink-0">
               <img
-                src="/logo.png"
+                src="/logoo.png"
                 width={80}
                 height={45}
                 alt="Company Logo"
-                className="transition-transform duration-150 hover:scale-105"
+                
               />
             </a>
           </div>
