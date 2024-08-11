@@ -1,44 +1,46 @@
 import { useState } from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { SiTelegram } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
 
   const footerNavs = [
     {
-      label: "Resources",
+      label: t('resources'),
       items: [
-        { href: '#', name: 'Contact' },
-        { href: '#', name: 'Support' },
-        { href: '#', name: 'Documentation' },
-        { href: '#', name: 'Pricing' },
+        { href: '#', name: t('contactus') },
+        { href: '#', name: t('oursupport') },
+        { href: '#', name: t('documentation') },
+        { href: '#', name: t('pricing') },
       ],
     },
     {
-      label: "About",
+      label: t('about'),
       items: [
-        { href: '#', name: 'Terms' },
-        { href: '#', name: 'License' },
-        { href: '#', name: 'Privacy' },
-        { href: '#', name: 'About Us' },
+        { href: '#', name: t('terms') },
+        { href: '#', name: t('license') },
+        { href: '#', name: t('privacy') },
+        { href: '#', name: t('aboutUs') },
       ],
     },
     {
-      label: "Explore",
+      label: t('explore'),
       items: [
-        { href: '#', name: 'Showcase' },
-        { href: '#', name: 'Roadmap' },
-        { href: '#', name: 'Languages' },
-        { href: '#', name: 'Blog' },
+        { href: '#', name: t('showcase') },
+        { href: '#', name: t('roadmap') },
+        { href: '#', name: t('languages') },
+        { href: '#', name: t('blog') },
       ],
     },
     {
-      label: "Company",
+      label: t('company'),
       items: [
-        { href: '#', name: 'Partners' },
-        { href: '#', name: 'Team' },
-        { href: '#', name: 'Careers' },
+        { href: '#', name: t('partners') },
+        { href: '#', name: t('team') },
+        { href: '#', name: t('careers') },
       ],
     },
   ];
@@ -63,7 +65,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-yellow-600">Stay Connected</h3>
+            <h3 className="text-2xl font-bold text-yellow-600">{t('stayConnected')}</h3>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div className="relative">
                 <input
@@ -71,22 +73,22 @@ export default function Footer() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
+                  placeholder={t('enterEmail')}
                   className="w-full pl-10 pr-3 py-2 text-gray-900 bg-gray-200 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
                 <FaEnvelope className="w-5 h-5 text-gray-400 absolute left-2 top-2.5" />
               </div>
               <button className="w-full px-4 py-2 text-sm font-medium text-white bg-yellow-600 rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-200">
-                Subscribe to Newsletter
+                {t('subscribe')}
               </button>
             </form>
             <div className="flex items-center space-x-3 text-sm">
               <FaMapMarkerAlt className="w-4 h-4 text-gray-600" />
-              <span>Al Khawd / Al Seeb / Muscat Governorate</span>
+              <span>{t('address')}</span>
             </div>
             <div className="flex items-center space-x-3 text-sm">
               <FaPhone className="w-4 h-4 text-gray-600" />
-              <span>968 96611253</span>
+              <span>{t('phone')}</span>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-2">
@@ -119,10 +121,10 @@ export default function Footer() {
               <a href="#" className="hover:text-gray-800 transition duration-200">
                 <SiTelegram size={20} />
               </a>
-            
+             
             </div>
             <div className="mt-4 sm:mt-0">
-              <a href="/" onClick={handleBackToTop} className="text-yellow-600 hover:text-yellow-700 transition duration-200">Back to Top</a>
+              <a href="/" onClick={handleBackToTop} className="text-yellow-600 hover:text-yellow-700 transition duration-200">{t('backToTop')}</a>
             </div>
           </div>
         </div>

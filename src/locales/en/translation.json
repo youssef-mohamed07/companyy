@@ -1,0 +1,166 @@
+{
+ 
+ 
+    "header": {
+      "statistics": "Statistics",
+      "services": "Services",
+      "projects": "Projects",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+        "successful_deals": "Over 200 successful deals",
+        "help_startups": "We help startups to grow and make money",
+        "description": " We provide cutting-edge solutions tailored to meet the unique needs of your business, helping you stay ahead of the competition.",
+        "services": "Services",
+        "contact_us": "Contact us",
+        "why_choose_us": "Why Choose Us",
+        "expert_team": "Expert Team",
+        "expert_team_desc": "Our team of professionals is highly experienced in various industries, ensuring top-quality services for your business.",
+        "innovative_solutions": "Innovative Solutions",
+        "innovative_solutions_desc": "We provide cutting-edge solutions tailored to meet the unique needs of your business, helping you stay ahead of the competition.",
+        "client_satisfaction": "Client Satisfaction",
+        "client_satisfaction_desc": "Our primary goal is to ensure client satisfaction, and we go above and beyond to achieve it with every project we undertake.",
+        "global_reach": "Global Reach",
+        "global_reach_desc": "We have successfully executed projects for clients across the globe, making us a trusted partner worldwide.",
+        "support": "24/7 Support",
+        "support_desc": "Our dedicated support team is available around the clock to assist you with any queries or issues you may encounter.",
+        "competitive_pricing": "Competitive Pricing",
+        "competitive_pricing_desc": "We offer high-quality services at competitive prices, ensuring that you get the best value for your investment."
+,"happy_customers": "We do our best to make customers always happy",
+    "customers": "Customers",
+    "downloads": "Downloads",
+    "countries": "Countries",
+    "total_revenue": "Total Revenue",
+    "happy_customers_desc": "Happy and satisfied customers worldwide",
+    "downloads_desc": "App downloads from across the globe",
+    "countries_desc": "Our reach spans over 40 countries",
+    "total_revenue_desc": "Impressive revenue generated to date",
+        "projects": {
+          "Commercial": "Commercial",
+          "Residential": "Residential",
+          "Manufacturing": "Manufacturing",
+          "Trade": "Trade",
+          "Real Estate": "Real Estate",
+          "Construction": "Construction",
+          "Services": "Services",
+          "Technology": "Technology",
+          "Agriculture": "Agriculture",
+          "Hospitality": "Hospitality",
+          "Education": "Education",
+          "Health": "Health",
+          "A modern commercial complex with state-of-the-art facilities.": "A modern commercial complex with state-of-the-art facilities.",
+          "Luxury residential apartments with scenic views.": "Luxury residential apartments with scenic views.",
+          "Advanced recycling facility processing various materials.": "Advanced recycling facility processing various materials.",
+          "Eco-friendly electric bikes with cutting-edge technology.": "Eco-friendly electric bikes with cutting-edge technology.",
+          "Manufacturing of high-quality plastic goods for various industries.": "Manufacturing of high-quality plastic goods for various industries.",
+          "Premium fish products with sustainable sourcing.": "Premium fish products with sustainable sourcing.",
+          "Exclusive collection of handcrafted gold jewelry.": "Exclusive collection of handcrafted gold jewelry.",
+          "Wide range of certified used vehicles at competitive prices.": "Wide range of certified used vehicles at competitive prices.",
+          "Premium real estate properties with attractive returns.": "Premium real estate properties with attractive returns.",
+          "High-quality construction services for residential and commercial projects.": "High-quality construction services for residential and commercial projects.",
+          "Innovative advertising solutions to boost your brand visibility.": "Innovative advertising solutions to boost your brand visibility.",
+          "Affordable vehicle rental services with a variety of options.": "Affordable vehicle rental services with a variety of options.",
+          "Exciting tour packages to explore beautiful destinations.": "Exciting tour packages to explore beautiful destinations.",
+          "Comprehensive media services including production and marketing.": "Comprehensive media services including production and marketing.",
+          "Top-notch health services with state-of-the-art facilities.": "Top-notch health services with state-of-the-art facilities.",
+          "Wide range of food products with quality assurance.": "Wide range of food products with quality assurance.",
+          "Effective waste management solutions for a cleaner environment.": "Effective waste management solutions for a cleaner environment.",
+          "Quality used goods for budget-friendly shopping.": "Quality used goods for budget-friendly shopping.",
+          "Wide variety of spare parts for different vehicle brands.": "Wide variety of spare parts for different vehicle brands.",
+          "Expert vehicle repair services with guaranteed quality.": "Expert vehicle repair services with guaranteed quality.",
+          "Creative publicity campaigns to enhance brand awareness.": "Creative publicity campaigns to enhance brand awareness.",
+          "Innovative e-commerce solutions for seamless online shopping.": "Innovative e-commerce solutions for seamless online shopping.",
+          "Sustainable agricultural practices for high yield production.": "Sustainable agricultural practices for high yield production.",
+          "Unforgettable tourism experiences with guided tours and activities.": "Unforgettable tourism experiences with guided tours and activities.",
+          "Culinary delights from top-rated restaurants across the region.": "Culinary delights from top-rated restaurants across the region.",
+          "High-quality educational services for all age groups.": "High-quality educational services for all age groups.",
+          "State-of-the-art laboratories for scientific research and development.": "State-of-the-art laboratories for scientific research and development.",
+          "Exclusive deals on aircraft and aviation equipment.": "Exclusive deals on aircraft and aviation equipment.",
+          "High-quality oil products for various industries.": "High-quality oil products for various industries.",
+          "Advanced industrial workshops with modern machinery.": "Advanced industrial workshops with modern machinery."
+        },
+            "testimonials": {
+              "title": "What Our Clients Say",
+              "description": "Discover how our solutions have transformed businesses and delighted users across industries.",
+              "items": {
+                "1": {
+                  "name": "Salem Ben Nasser",
+                  "title": "Omani advisor",
+                  "quote": "This service has revolutionized our business operations. The efficiency and reliability are unmatched."
+                },
+                "2": {
+                  "name": "Mohammed Al Barwani",
+                  "title": "Omani billionaire businessman",
+                  "quote": "I'm impressed by the intuitive design and powerful features. It's a game-changer for our development process."
+                },
+                "3": {
+                  "name": "Waqas Al Adawi",
+                  "title": "Omani businessman",
+                  "quote": "The attention to detail and user experience is exceptional. It's a pleasure to work with such a well-crafted product."
+                },
+                "4": {
+                  "name": "Muneeb Al Kindi",
+                  "title": "CEO of Gate 10 LLC",
+                  "quote": "Our marketing campaigns have seen a significant boost in effectiveness since we started using this platform."
+                },
+                "5": {
+                  "name": "Othman al Mandhari",
+                  "title": "The Founder and CEO of InnoTech",
+                  "quote": "The scalability and performance of this solution have exceeded our expectations. It's been crucial to our growth."
+                },
+                "6": {
+                  "name": "Maqbool Hameed Al Saleh",
+                  "title": "Chairman of the board of directors of the OHI Group of Companies",
+                  "quote": "The insights we've gained through this tool have been invaluable. It's transformed our approach to user research."
+                }
+              }
+          },
+          "contact": {
+            "weAreHereToAnswer": "We're here to answer your questions and help you in any way we can. Reach out to us through any of the methods below or use our contact form.",
+            "phone": "Phone",
+            "address": "Address",
+            "businessHours": "Business Hours",
+            "website": "Website",
+            "getInTouch": "Get in Touch",
+            "contactInformation": "Contact Information",
+            "faq": "FAQ",
+            "sendUsAMessage": "Send us a Message",
+            "fullName": "Full Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+
+            "sendMessage": "Send Message",
+            "businessHoursDetails": "We're open Monday to Friday, 9AM to 5PM.",
+            "weekendSupport": "We offer limited email support on weekends for urgent matters."
+          }
+        ,  "stayConnected": "Stay Connected",
+        "subscribe": "Subscribe to Newsletter",
+        "enterEmail":"enter your  mail",
+
+        "address": "             Al Khawd / Al Seeb / Muscat Governorate",
+        "phone": "968 96611253",
+        "resources": "Resources",
+        "contactus": "Contact",
+        "oursupport": "Support",
+        "documentation": "Documentation",
+        "pricing": "Pricing",
+        "about": "About",
+        "terms": "Terms",
+        "license": "License",
+        "privacy": "Privacy",
+        "aboutUs": "About Us",
+        "explore": "Explore",
+        "showcase": "Showcase",
+        "roadmap": "Roadmap",
+        "languages": "Languages",
+        "blog": "Blog",
+        "company": "Company",
+        "partners": "Partners",
+        "team": "Team",
+        "careers": "Careers",
+        "backToTop": "Back to Top"
+      
+          
+          
+      }

@@ -1,49 +1,52 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Testimonials() {
+    const { t } = useTranslation();
+
     const testimonials = [
         {
             avatar: "1.jpg",
-            name: "Salem Ben Nasser",
-            title: "Omani advisor",
-            quote: "This service has revolutionized our business operations. The efficiency and reliability are unmatched.",
+            name: t('testimonials.items.1.name'),
+            title: t('testimonials.items.1.title'),
+            quote: t('testimonials.items.1.quote'),
             rating: 5
         },
         {
             avatar: "2.jpg",
-            name: "Mohammed Al Barwani",
-            title: "Omani billionaire businessman",
-            quote: "I'm impressed by the intuitive design and powerful features. It's a game-changer for our development process.",
+            name: t('testimonials.items.2.name'),
+            title: t('testimonials.items.2.title'),
+            quote: t('testimonials.items.2.quote'),
             rating: 5
         },
         {
             avatar: "3.jpg",
-            name: "Waqas Al Adawi",
-            title: "Omani businessman",
-            quote: "The attention to detail and user experience is exceptional. It's a pleasure to work with such a well-crafted product.",
+            name: t('testimonials.items.3.name'),
+            title: t('testimonials.items.3.title'),
+            quote: t('testimonials.items.3.quote'),
             rating: 4
         },
         {
             avatar: "4.jpg",
-            name: "Muneeb Al Kindi",
-            title: "CEO of Gate 10 LLC",
-            quote: "Our marketing campaigns have seen a significant boost in effectiveness since we started using this platform.",
+            name: t('testimonials.items.4.name'),
+            title: t('testimonials.items.4.title'),
+            quote: t('testimonials.items.4.quote'),
             rating: 5
         },
         {
             avatar: "5.jpg",
-            name: "Othman al Mandhari",
-            title: "The Founder and CEO of InnoTech",
-            quote: "The scalability and performance of this solution have exceeded our expectations. It's been crucial to our growth.",
+            name: t('testimonials.items.5.name'),
+            title: t('testimonials.items.5.title'),
+            quote: t('testimonials.items.5.quote'),
             rating: 5
         },
         {
             avatar: "6.jpg",
-            name: "Maqbool Hameed Al Saleh",
-            title: "Chairman of the board of directors of the OHI Group of Companies",
-            quote: "The insights we've gained through this tool have been invaluable. It's transformed our approach to user research.",
+            name: t('testimonials.items.6.name'),
+            title: t('testimonials.items.6.title'),
+            quote: t('testimonials.items.6.quote'),
             rating: 4
         },
     ];
@@ -63,10 +66,10 @@ export default function Testimonials() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
                     <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-                        What Our Clients Say
+                        {t('testimonials.title')}
                     </h2>
                     <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-                        Discover how our solutions have transformed businesses and delighted users across industries.
+                        {t('testimonials.description')}
                     </p>
                 </div>
 

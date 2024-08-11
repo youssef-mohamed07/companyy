@@ -1,32 +1,36 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faMapMarkerAlt, faClock, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactUS() {
+    const { t } = useTranslation();
+    
     const contactMethods = [
         {
             icon: faEnvelope,
             contact: "aa90101077aa@gmail.com",
-            label: "Email"
+            label: t('contact.email')
         },
         {
             icon: faPhone,
             contact: "968 96611253",
-            label: "Phone"
+            label: t('contact.phone')
         },
         {
             icon: faMapMarkerAlt,
             contact: "Al Khawd / Al Seeb / Muscat Governorate",
-            label: "Address"
+            label: t('contact.address')
         },
         {
             icon: faClock,
-            contact: "Mon-Fri: 9AM-5PM",
-            label: "Business Hours"
+            contact: t('contact.businessHoursDetails'),
+            label: t('contact.businessHours')
         },
         {
             icon: faGlobe,
             contact: "abdulazizgroups.com",
-            label: "Website"
+            label: t('contact.website')
         }
     ];
 
@@ -34,17 +38,20 @@ export default function ContactUS() {
         <section id="contact" className="bg-white py-16">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <header className="text-center mb-10">
-                    <h2 className="text-4xl font-bold mb-8 text-gray-900">Get in Touch</h2>
+                    <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">
+                        {t('contact.getInTouch')}
+                    </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        We're here to answer your questions and help you in any way we can. 
-                        Reach out to us through any of the methods below or use our contact form.
+                        {t('contact.weAreHereToAnswer')}
                     </p>
                 </header>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div className="space-y-8">
                         <div className="bg-white p-6 rounded-lg shadow-md">
-                            <h3 className="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                                {t('contact.contactInformation')}
+                            </h3>
                             <ul className="space-y-4">
                                 {contactMethods.map((item, idx) => (
                                     <li key={idx} className="flex items-center gap-x-3">
@@ -59,16 +66,14 @@ export default function ContactUS() {
                                 ))}
                             </ul>
                         </div>
-
-                        
+                       
                     </div>
-
                     <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4">Send us a Message</h3>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-4">{t('contact.sendUsAMessage')}</h3>
                         <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="full-name">
-                                    Full Name
+                                    {t('contact.fullName')}
                                 </label>
                                 <input
                                     id="full-name"
@@ -79,7 +84,7 @@ export default function ContactUS() {
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">
-                                    Email
+                                    {t('contact.email')}
                                 </label>
                                 <input
                                     id="email"
@@ -90,7 +95,7 @@ export default function ContactUS() {
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="subject">
-                                    Subject
+                                    {t('contact.subject')}
                                 </label>
                                 <input
                                     id="subject"
@@ -101,7 +106,7 @@ export default function ContactUS() {
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="message">
-                                    Message
+                                    {t('contact.message')}
                                 </label>
                                 <textarea 
                                     id="message"
@@ -112,12 +117,12 @@ export default function ContactUS() {
                             <button
                                 className="w-full px-4 py-2 text-white font-medium bg-yellow-600 hover:bg-yellow-700 active:bg-yellow-800 rounded-md transition duration-150 ease-in-out"
                             >
-                                Send Message
+                                {t('contact.sendMessage')}
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-    );
+    )
 }

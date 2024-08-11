@@ -1,18 +1,22 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaProjectDiagram, FaServicestack, FaChartBar, FaComment, FaPhone, FaGlobe } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
-const navigation = [
-  { title: "Statistics", path: "#statistics", icon: <FaChartBar /> },
-  { title: "Services", path: "#services", icon: <FaServicestack /> },
-  { title: "Projects", path: "#projects", icon: <FaProjectDiagram /> },
-  { title: "Testimonials", path: "#testimonials", icon: <FaComment /> },
-  { title: "Contact", path: "#contact", icon: <FaPhone /> }
-];
+const Header = () => {
+  const { t, i18n } = useTranslation();
 
-export default function Header() {
+
+  const navigation = [
+    { title: t("header.statistics"), path: "#statistics", icon: <FaChartBar /> },
+    { title: t("header.services"), path: "#services", icon: <FaServicestack /> },
+    { title: t("header.projects"), path: "#projects", icon: <FaProjectDiagram /> },
+    { title: t("header.testimonials"), path: "#testimonials", icon: <FaComment /> },
+    { title: t("header.contact"), path: "#contact", icon: <FaPhone /> }
+  ];
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -52,7 +56,10 @@ export default function Header() {
   }, []);
 
   const toggleLanguage = () => {
-    setLanguage(prevLang => (prevLang === 'en' ? 'ar' : 'en'));
+    const newLanguage = language === 'en' ? 'ar' : 'en';
+    setLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
@@ -65,8 +72,7 @@ export default function Header() {
                 src="/logoo.png"
                 width={80}
                 height={45}
-                alt="Company Logo"
-                
+                alt={t("company_logo")}
               />
             </a>
           </div>
@@ -142,3 +148,5 @@ export default function Header() {
     </nav>
   );
 }
+
+export default Header;

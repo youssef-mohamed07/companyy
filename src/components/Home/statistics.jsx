@@ -1,27 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Statistics() {
+    const { t } = useTranslation();
+
     const stats = [
         {
             data: "35K",
-            title: "Customers",
-            description: "Happy and satisfied customers worldwide"
+            title: t('customers'),
+            description: t('happy_customers_desc')
         },
         {
             data: "10K+",
-            title: "Downloads",
-            description: "App downloads from across the globe"
+            title: t('downloads'),
+            description: t('downloads_desc')
         },
         {
             data: "40+",
-            title: "Countries",
-            description: "Our reach spans over 40 countries"
+            title: t('countries'),
+            description: t('countries_desc')
         },
         {
             data: "30M+",
-            title: "Total Revenue",
-            description: "Impressive revenue generated to date"
+            title: t('total_revenue'),
+            description: t('total_revenue_desc')
         },
     ];
 
@@ -50,7 +53,7 @@ export default function Statistics() {
                             draggable='false' 
                             src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" 
                             className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" 
-                            alt="Happy customers" 
+                            alt={t('happy_customers')}
                         />
                     </motion.div>
                     <div className="mt-6 gap-12 sm:mt-0 md:flex lg:block">
@@ -61,7 +64,7 @@ export default function Statistics() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                         >
                             <h3 className="text-black text-3xl font-semibold sm:text-4xl">
-                                We do our best to make customers always happy
+                                {t('happy_customers')}
                             </h3>
                         </motion.div>
                         <motion.div 
