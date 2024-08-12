@@ -1,6 +1,9 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBuilding, FaHome, FaIndustry, FaExchangeAlt, FaLandmark, FaHardHat, FaCogs, FaMicrochip, FaSeedling, FaHotel, FaGraduationCap, FaMedkit, FaSearch, FaStar, FaTimes, FaBars } from 'react-icons/fa';
+import {
+  FaBuilding, FaHome, FaIndustry, FaExchangeAlt, FaLandmark, FaHardHat, FaCogs,
+  FaMicrochip,FaExternalLinkAlt, FaSeedling, FaHotel, FaGraduationCap, FaMedkit, FaSearch, FaStar, FaTimes, FaBars,
+} from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 // Define category icons mapping
@@ -19,6 +22,7 @@ const categoryIcons = {
   Health: FaMedkit,
 };
 
+// Sample projects data
 const projects = [
   { id: 1, name: 'Commercial', address: '2715 Ash Dr. San Jose, South Dakota', image: 'a.avif', category: 'Commercial', description: 'A modern commercial complex with state-of-the-art facilities.' },
   { id: 2, name: 'Residential', address: '2972 Westheimer Rd. Santa Ana, Illinois', image: 'b.avif', category: 'Residential', description: 'Luxury residential apartments with scenic views.' },
@@ -63,7 +67,6 @@ export default function Projects() {
   const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
   const projectsPerPage = 6;
 
-
   // Filter and sort projects
   const filteredAndSortedProjects = useMemo(() => {
     let result = projects;
@@ -73,7 +76,7 @@ export default function Projects() {
     }
 
     if (searchTerm) {
-      result = result.filter(project => 
+      result = result.filter(project =>
         project.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
@@ -104,24 +107,19 @@ export default function Projects() {
     setIsCategoryMenuOpen(false);
   };
 
-  // Reset the page to 1 when the filter, searchTerm, or sortOption changes
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filter, searchTerm, sortOption]);
-
   // Toggle favorite
   const toggleFavorite = (projectId) => {
-    setFavorites(prev => 
-      prev.includes(projectId) 
+    setFavorites(prev =>
+      prev.includes(projectId)
         ? prev.filter(id => id !== projectId)
         : [...prev, projectId]
     );
   };
 
   return (
-    <div className="container mx-auto p-4 bg-white text-black" id='projects'>
+    <div className="container mx-auto p-4 bg-white text-black" id="projects">
       <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">{t('header.projects')}</h2>
-      
+
       <div className="mb-4 flex flex-wrap items-center justify-between">
         <div className="relative w-full sm:w-auto mb-4 sm:mb-0">
           <input
@@ -142,7 +140,7 @@ export default function Projects() {
           <option value="category">{t('sort_by_category')}</option>
         </select>
       </div>
-      
+
       <div className="flex flex-col lg:flex-row mb-8">
         <div className="w-full lg:w-1/4 mb-4 lg:mb-0">
           <div className="bg-gray-100 rounded-lg p-4">
@@ -171,12 +169,12 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        
+
         <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {currentProjects.map((project) => (
-              <motion.div 
-                key={project.id} 
+              <motion.div
+                key={project.id}
                 className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 relative"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -186,20 +184,19 @@ export default function Projects() {
                 <img src={project.image} alt={t(`projects.${project.name}`)} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-2 text-yellow-500">{t(`projects.${project.name}`)}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{project.address}</p>
                   <p className="text-gray-800">{t(`projects.${project.description}`)}</p>
                   <div className="mt-4 flex items-center text-sm text-gray-600">
                     {categoryIcons[project.category] && React.createElement(categoryIcons[project.category], { className: "mr-2" })}
                     {t(`projects.${project.category}`)}
                   </div>
                 </div>
-                <button 
+                <button
                   className="absolute top-2 right-2 text-yellow-500 hover:text-yellow-600"
                   onClick={() => toggleFavorite(project.id)}
                 >
                   <FaStar className={favorites.includes(project.id) ? "text-yellow-500" : "text-gray-300"} />
                 </button>
-                <button 
+                <button
                   className="absolute bottom-2 right-2 bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600"
                   onClick={() => setSelectedProject(project)}
                 >
@@ -210,7 +207,7 @@ export default function Projects() {
           </AnimatePresence>
         </div>
       </div>
-      
+
       <div className="flex flex-col sm:flex-row justify-between items-center mt-8">
         <button
           className="w-full sm:w-auto mb-4 sm:mb-0 bg-yellow-500 text-white px-6 py-2 rounded-full font-bold transition-colors duration-200 hover:bg-yellow-600"
@@ -222,8 +219,8 @@ export default function Projects() {
         <div className="flex space-x-2 mb-4 sm:mb-0">
           {[...Array(pageCount)].map((_, i) => (
             <button
-              key={i}
-              className={`w-8 h-8 rounded-full flex items-center justify-center ${currentPage === i + 1 ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-black'} transition-colors duration-200`}
+              key={i + 1}
+              className={`px-4 py-2 rounded-full font-bold ${currentPage === i + 1 ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-black'}`}
               onClick={() => setCurrentPage(i + 1)}
             >
               {i + 1}
@@ -240,37 +237,50 @@ export default function Projects() {
       </div>
 
       {selectedProject && (
-        <AnimatePresence>
-          <motion.div
-            className="fixed inset-0 bg-gray-800 bg-opacity-70 flex justify-center items-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-4"
-              initial={{ y: -100 }}
-              animate={{ y: 0 }}
-              exit={{ y: 100 }}
-            >
-              <button
-                className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-                onClick={() => setSelectedProject(null)}
-              >
-                <FaTimes />
-              </button>
-              <h2 className="text-2xl font-bold mb-4">{t(`projects.${selectedProject.name}`)}</h2>
-              <img src={selectedProject.image} alt={t(`projects.${selectedProject.name}`)} className="w-full h-48 object-cover mb-4" />
-              <p className="text-lg mb-2">{selectedProject.address}</p>
-              <p>{t(`projects.${selectedProject.description}`)}</p>
-              <div className="mt-4 text-sm text-gray-600 flex items-center">
-                {categoryIcons[selectedProject.category] && React.createElement(categoryIcons[selectedProject.category], { className: "mr-2" })}
-                {t(`projects.${selectedProject.category}`)}
-              </div>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-      )}
+  <AnimatePresence>
+    <motion.div
+      className="fixed inset-0 bg-gray-800 bg-opacity-70 flex justify-center items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div
+        className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-4 relative"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        exit={{ y: 100 }}
+      >
+        <button
+          className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+          onClick={() => setSelectedProject(null)}
+        >
+          <FaTimes />
+        </button>
+        <h2 className="text-2xl font-bold mb-4">{t(`projects.${selectedProject.name}`)}</h2>
+        <img 
+          src={selectedProject.image} 
+          alt={t(`projects.${selectedProject.name}`)} 
+          className="w-full h-48 object-cover mb-4" 
+        />
+        <p>{t(`projects.${selectedProject.description}`)}</p>
+        <div className="mt-4 text-sm text-gray-600 flex items-center">
+          {categoryIcons[selectedProject.category] && 
+            React.createElement(categoryIcons[selectedProject.category], { className: "mr-2" })}
+          {t(`projects.${selectedProject.category}`)}
+        </div>
+        <a
+          href={selectedProject.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 w-full bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 flex items-center justify-center"
+       >
+          <FaExternalLinkAlt className="mr-2" />
+          {t('projects.visitWebsite')}
+        </a>
+      </motion.div>
+    </motion.div>
+  </AnimatePresence>
+)}
     </div>
   );
 }
