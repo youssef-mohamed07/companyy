@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBuilding, FaHome, FaIndustry, FaExchangeAlt, FaLandmark, FaHardHat, FaCogs, FaMicrochip, FaSeedling, FaHotel, FaGraduationCap, FaMedkit, FaSearch, FaStar, FaTimes, FaBars, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaBuilding, FaHome, FaIndustry, FaExchangeAlt, FaLandmark, FaHardHat, FaCogs, FaMicrochip, FaSeedling, FaHotel, FaGraduationCap, FaMedkit, FaSearch, FaStar, FaTimes, FaBars } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 // Define category icons mapping
 const categoryIcons = {
@@ -52,6 +53,7 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
@@ -60,6 +62,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
   const projectsPerPage = 6;
+
 
   // Filter and sort projects
   const filteredAndSortedProjects = useMemo(() => {
@@ -117,13 +120,13 @@ export default function Projects() {
 
   return (
     <div className="container mx-auto p-4 bg-white text-black" id='projects'>
-      <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">Our Projects</h2>
+      <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">{t('header.projects')}</h2>
       
       <div className="mb-4 flex flex-wrap items-center justify-between">
         <div className="relative w-full sm:w-auto mb-4 sm:mb-0">
           <input
             type="text"
-            placeholder="Search projects..."
+            placeholder={t('search_projects')}
             className="w-full sm:w-auto pl-10 pr-4 py-2 border rounded-full"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -135,8 +138,8 @@ export default function Projects() {
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
         >
-          <option value="name">Sort by Name</option>
-          <option value="category">Sort by Category</option>
+          <option value="name">{t('sort_by_name')}</option>
+          <option value="category">{t('sort_by_category')}</option>
         </select>
       </div>
       
@@ -147,7 +150,7 @@ export default function Projects() {
               className="lg:hidden w-full text-left py-2 px-4 rounded-md bg-yellow-500 text-white font-bold mb-4"
               onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
             >
-              <FaBars className="inline-block mr-2" /> Categories
+              <FaBars className="inline-block mr-2" /> {t('categories')}
             </button>
             <div className={`${isCategoryMenuOpen ? 'block' : 'hidden'} lg:block`}>
               {['All', 'Commercial', 'Residential', 'Manufacturing', 'Trade', 'Real Estate', 'Construction', 'Services', 'Technology', 'Agriculture', 'Hospitality', 'Education', 'Health'].map((category) => {
@@ -161,7 +164,7 @@ export default function Projects() {
                     onClick={() => handleFilterChange(category)}
                   >
                     <Icon className="mr-2" />
-                    {category}
+                    {t(`projects.${category}`)}
                   </button>
                 );
               })}
@@ -180,13 +183,14 @@ export default function Projects() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
+                <img src={project.image} alt={t(`projects.${project.name}`)} className="w-full h-48 object-cover" />
                 <div className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-yellow-500">{project.name}</h3>
-                  <p className="text-gray-800">{project.description}</p>
+                  <h3 className="font-bold text-xl mb-2 text-yellow-500">{t(`projects.${project.name}`)}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{project.address}</p>
+                  <p className="text-gray-800">{t(`projects.${project.description}`)}</p>
                   <div className="mt-4 flex items-center text-sm text-gray-600">
                     {categoryIcons[project.category] && React.createElement(categoryIcons[project.category], { className: "mr-2" })}
-                    {project.category}
+                    {t(`projects.${project.category}`)}
                   </div>
                 </div>
                 <button 
@@ -199,7 +203,7 @@ export default function Projects() {
                   className="absolute bottom-2 right-2 bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600"
                   onClick={() => setSelectedProject(project)}
                 >
-                  Details
+                  {t('details')}
                 </button>
               </motion.div>
             ))}
@@ -213,7 +217,7 @@ export default function Projects() {
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
         >
-          ← Previous
+          ← {t('previous')}
         </button>
         <div className="flex space-x-2 mb-4 sm:mb-0">
           {[...Array(pageCount)].map((_, i) => (
@@ -231,7 +235,7 @@ export default function Projects() {
           onClick={() => setCurrentPage(prev => Math.min(prev + 1, pageCount))}
           disabled={currentPage === pageCount}
         >
-          Next →
+          {t('next')} →
         </button>
       </div>
 
@@ -244,7 +248,7 @@ export default function Projects() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-4 relative"
+              className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-4"
               initial={{ y: -100 }}
               animate={{ y: 0 }}
               exit={{ y: 100 }}
@@ -255,23 +259,14 @@ export default function Projects() {
               >
                 <FaTimes />
               </button>
-              <h2 className="text-2xl font-bold mb-4">{selectedProject.name}</h2>
-              <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-48 object-cover mb-4" />
+              <h2 className="text-2xl font-bold mb-4">{t(`projects.${selectedProject.name}`)}</h2>
+              <img src={selectedProject.image} alt={t(`projects.${selectedProject.name}`)} className="w-full h-48 object-cover mb-4" />
               <p className="text-lg mb-2">{selectedProject.address}</p>
-              <p>{selectedProject.description}</p>
+              <p>{t(`projects.${selectedProject.description}`)}</p>
               <div className="mt-4 text-sm text-gray-600 flex items-center">
                 {categoryIcons[selectedProject.category] && React.createElement(categoryIcons[selectedProject.category], { className: "mr-2" })}
-                {selectedProject.category}
+                {t(`projects.${selectedProject.category}`)}
               </div>
-              <a
-                href={selectedProject.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 w-full bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 flex items-center justify-center"
-              >
-                <FaExternalLinkAlt className="mr-2" />
-                Visit Website
-              </a>
             </motion.div>
           </motion.div>
         </AnimatePresence>

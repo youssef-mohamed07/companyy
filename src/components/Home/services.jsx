@@ -4,43 +4,46 @@ import {
   faBolt, faChartLine, faShieldAlt, faCubes,
   faLock, faPuzzlePiece, faRocket
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 export default function Services() {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: faBolt,
-      title: "Fast Refresh",
-      desc: "Experience lightning-fast updates with our cutting-edge refresh technology."
+      title: t("Fast Refresh"),
+      desc: t("Experience lightning-fast updates with our cutting-edge refresh technology.")
     },
     {
       icon: faChartLine,
-      title: "Advanced Analytics",
-      desc: "Gain deep insights with our powerful and intuitive analytics tools."
+      title: t("Advanced Analytics"),
+      desc: t("Gain deep insights with our powerful and intuitive analytics tools.")
     },
     {
       icon: faShieldAlt,
-      title: "Robust Security",
-      desc: "Rest easy with our state-of-the-art security measures protecting your data."
+      title: t("Robust Security"),
+      desc: t("Rest easy with our state-of-the-art security measures protecting your data.")
     },
     {
       icon: faCubes,
-      title: "Modular Architecture",
-      desc: "Build and scale your project efficiently with our flexible, modular approach."
+      title: t("Modular Architecture"),
+      desc: t("Build and scale your project efficiently with our flexible, modular approach.")
     },
     {
       icon: faLock,
-      title: "Ironclad Privacy",
-      desc: "Your privacy is our top priority, with industry-leading protection measures."
+      title: t("Ironclad Privacy"),
+      desc: t("Your privacy is our top priority, with industry-leading protection measures.")
     },
     {
       icon: faPuzzlePiece,
-      title: "Seamless Integration",
-      desc: "Effortlessly connect and expand your ecosystem with our integration capabilities."
+      title: t("Seamless Integration"),
+      desc: t("Effortlessly connect and expand your ecosystem with our integration capabilities.")
     },
     {
       icon: faRocket,
-      title: "Performance Boost",
-      desc: "Supercharge your applications with our optimized performance enhancements."
+      title: t("Performance Boost"),
+      desc: t("Supercharge your applications with our optimized performance enhancements.")
     },
   ];
 
@@ -49,10 +52,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Empowering Your Digital Journey
+            {t("Empowering Your Digital Journey")}
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover how our cutting-edge services can revolutionize your business and propel you towards success.
+            {t("Discover how our cutting-edge services can revolutionize your business and propel you towards success.")}
           </p>
         </div>
         <div className="mt-20">
