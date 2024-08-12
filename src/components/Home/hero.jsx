@@ -18,7 +18,7 @@ export default function Hero() {
                         <h1 className="text-sm text-yellow-500 font-medium">
                             {t('successful_deals')}
                         </h1>
-                        <h2 className="text-4xl text-black font-extrabold md:text-5xl">
+                        <h2 className="text-4xl text-black font-bold md:text-5xl">
                             {t('help_startups')}
                         </h2>
                         <p className="text-black">
@@ -57,67 +57,7 @@ export default function Hero() {
             </section>
            
             {/* Why Choose Us Section */}
-            <section className="bg-white py-16">
-                <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h3 className="text-center text-3xl font-bold text-black mb-12">{t('why_choose_us')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        <div className="flex items-start">
-                            <FaCheckCircle className="text-yellow-500 text-3xl mr-4 flex-shrink-0" />
-                            <div>
-                                <h4 className="text-xl font-semibold text-black">{t('expert_team')}</h4>
-                                <p className="text-black mt-2">
-                                    {t('expert_team_desc')}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start">
-                            <FaCheckCircle className="text-yellow-500 text-3xl mr-4 flex-shrink-0" />
-                            <div>
-                                <h4 className="text-xl font-semibold text-black">{t('innovative_solutions')}</h4>
-                                <p className="text-black mt-2">
-                                    {t('innovative_solutions_desc')}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start">
-                            <FaCheckCircle className="text-yellow-500 text-3xl mr-4 flex-shrink-0" />
-                            <div>
-                                <h4 className="text-xl font-semibold text-black">{t('client_satisfaction')}</h4>
-                                <p className="text-black mt-2">
-                                    {t('client_satisfaction_desc')}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start">
-                            <FaCheckCircle className="text-yellow-500 text-3xl mr-4 flex-shrink-0" />
-                            <div>
-                                <h4 className="text-xl font-semibold text-black">{t('global_reach')}</h4>
-                                <p className="text-black mt-2">
-                                    {t('global_reach_desc')}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start">
-                            <FaCheckCircle className="text-yellow-500 text-3xl mr-4 flex-shrink-0" />
-                            <div>
-                                <h4 className="text-xl font-semibold text-black">{t('support')}</h4>
-                                <p className="text-black mt-2">
-                                    {t('support_desc')}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start">
-                            <FaCheckCircle className="text-yellow-500 text-3xl mr-4 flex-shrink-0" />
-                            <div>
-                                <h4 className="text-xl font-semibold text-black">{t('competitive_pricing')}</h4>
-                                <p className="text-black mt-2">
-                                    {t('competitive_pricing_desc')}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
         </div>
     );
 }

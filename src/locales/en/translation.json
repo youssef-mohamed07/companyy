@@ -36,6 +36,7 @@
     "countries_desc": "Our reach spans over 40 countries",
     "total_revenue_desc": "Impressive revenue generated to date",
         "projects": {
+          "All": "All",
           "Commercial": "Commercial",
           "Residential": "Residential",
           "Manufacturing": "Manufacturing",
@@ -136,7 +137,7 @@
           }
         ,  "stayConnected": "Stay Connected",
         "subscribe": "Subscribe to Newsletter",
-        "enterEmail":"enter your  mail",
+        "enterEmail":"Enter your  mail",
 
         "address": "             Al Khawd / Al Seeb / Muscat Governorate",
         "phone": "968 96611253",

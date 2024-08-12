@@ -45,6 +45,7 @@
         "company_logo": "شعار الشركة"
       },
         "projects": {
+          "All": "الكل",
           "Commercial": "تجاري",
           "Residential": "سكني",
           "Manufacturing": "تصنيع",
@@ -144,7 +145,7 @@
             "businessHoursDetails": "نحن مفتوحون من الإثنين إلى الجمعة، من 9 صباحًا حتى 5 مساءً.",
             "weekendSupport": "نقدم دعمًا محدودًا عبر البريد الإلكتروني في عطلات نهاية الأسبوع للحالات الطارئة."
           },
-          "stayConnected": "ابقى على اتصال",
+          "stayConnected": "إبقَ على اتصال",
           "subscribe": "اشترك في النشرة الإخبارية",
           "enterEmail":"ادخل بريدك",
 

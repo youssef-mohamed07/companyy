@@ -36,10 +36,6 @@ export default function Statistics() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-                <div 
-                    id="statistics"
-                    className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-75"
-                ></div>
             </motion.span>
             <section className="py-14 bg-white">
                 <div className="max-w-screen-xl mx-auto px-4 text-black gap-x-12 items-start justify-between lg:flex md:px-8">

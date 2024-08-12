@@ -7,6 +7,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 export default function Services() {
+
   const { t } = useTranslation();
 
   const features = [
@@ -51,7 +52,7 @@ export default function Services() {
     <section className="py-20 bg-gradient-to-b from-white to-gray-100" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
             {t("Empowering Your Digital Journey")}
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">

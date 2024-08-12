@@ -118,29 +118,7 @@ export default function Projects() {
 
   return (
     <div className="container mx-auto p-4 bg-white text-black" id="projects">
-      <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">{t('header.projects')}</h2>
-
-      <div className="mb-4 flex flex-wrap items-center justify-between">
-        <div className="relative w-full sm:w-auto mb-4 sm:mb-0">
-          <input
-            type="text"
-            placeholder={t('search_projects')}
-            className="w-full sm:w-auto pl-10 pr-4 py-2 border rounded-full"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-        </div>
-        <select
-          className="w-full sm:w-auto ml-0 sm:ml-4 p-2 border rounded-md"
-          value={sortOption}
-          onChange={(e) => setSortOption(e.target.value)}
-        >
-          <option value="name">{t('sort_by_name')}</option>
-          <option value="category">{t('sort_by_category')}</option>
-        </select>
-      </div>
-
+      <h2 className="text-4xl mb-8 text-center font-bold text-gray-900">{t('header.projects')}</h2>
       <div className="flex flex-col lg:flex-row mb-8">
         <div className="w-full lg:w-1/4 mb-4 lg:mb-0">
           <div className="bg-gray-100 rounded-lg p-4">
@@ -153,6 +131,8 @@ export default function Projects() {
             <div className={`${isCategoryMenuOpen ? 'block' : 'hidden'} lg:block`}>
               {['All', 'Commercial', 'Residential', 'Manufacturing', 'Trade', 'Real Estate', 'Construction', 'Services', 'Technology', 'Agriculture', 'Hospitality', 'Education', 'Health'].map((category) => {
                 const Icon = categoryIcons[category] || FaCogs;
+                const direction = document.documentElement.getAttribute('dir') || 'ltr';
+                const marginClass = direction === 'rtl' ? 'ml-2' : 'mr-2';
                 return (
                   <button
                     key={category}
@@ -161,7 +141,7 @@ export default function Projects() {
                     }`}
                     onClick={() => handleFilterChange(category)}
                   >
-                    <Icon className="mr-2" />
+                    <Icon className={marginClass} />
                     {t(`projects.${category}`)}
                   </button>
                 );
@@ -195,12 +175,6 @@ export default function Projects() {
                   onClick={() => toggleFavorite(project.id)}
                 >
                   <FaStar className={favorites.includes(project.id) ? "text-yellow-500" : "text-gray-300"} />
-                </button>
-                <button
-                  className="absolute bottom-2 right-2 bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600"
-                  onClick={() => setSelectedProject(project)}
-                >
-                  {t('details')}
                 </button>
               </motion.div>
             ))}

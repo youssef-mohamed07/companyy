@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Testimonials() {
+
+    const direction = document.documentElement.getAttribute('dir') || 'ltr';
+    const marginClass = direction === 'rtl' ? 'ml-2' : 'mr-2';
+
     const { t } = useTranslation();
 
     const testimonials = [
@@ -65,7 +69,7 @@ export default function Testimonials() {
         <section className="py-20 bg-gray-100" id="testimonials">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+                    <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
                         {t('testimonials.title')}
                     </h2>
                     <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
@@ -90,7 +94,7 @@ export default function Testimonials() {
                                         </p>
                                     </blockquote>
                                     <div className="flex items-center mt-8">
-                                        <img src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full object-cover" />
+                                        <img src={item.avatar} alt={item.name} className={` ${marginClass} w-12 h-12 rounded-full object-cover`} />
                                         <div className="ml-4">
                                             <p className="font-semibold text-gray-900">{item.name}</p>
                                             <p className="text-yellow-600 text-sm">{item.title}</p>

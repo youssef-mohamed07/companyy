@@ -38,7 +38,7 @@ export default function ContactUS() {
         <section id="contact" className="bg-white py-16">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <header className="text-center mb-10">
-                    <h2 className="text-4xl font-bold mb-8 text-center font-extrabold text-gray-900">
+                    <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">
                         {t('contact.getInTouch')}
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
